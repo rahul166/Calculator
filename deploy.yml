@@ -6,11 +6,5 @@
       docker_image:
         name: rahul166/projectrepo
         source: pull
-    - name: Create default containers
-      docker_container:
-        name: c1
-        image: rahul166/projectrepo
-        state: present
-
 
 

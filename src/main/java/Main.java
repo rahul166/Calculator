@@ -9,6 +9,15 @@ public class Main {
             return n*fact(n-1);
         }
     }
+    public static double getsqrt(int num){
+        return Math.sqrt(num);
+    }
+    public static double getlog(int num){
+        return Math.log(num);
+    }
+    public static double getpow(int num,int pow){
+        return Math.pow(num,pow);
+    }
     public static void main(String[] args){
         while(true) {
             System.out.println("Welcome......");
@@ -31,13 +40,13 @@ public class Main {
                 System.out.println("Enter the number");
                 int num = sc.nextInt();
                 System.out.println("Square root Of the Number");
-                int ans = (int) Math.sqrt(num);
+                double ans=getsqrt(num);
                 System.out.println(ans);
             } else if (choice == 3) {
                 System.out.println("Enter the number");
                 int num = sc.nextInt();
                 System.out.println("Log Of the Number");
-                double ans = Math.log(num);
+                double ans = getlog(num);
                 System.out.println(ans);
             } else if (choice == 4) {
                 System.out.println("Enter the base number");
@@ -45,7 +54,7 @@ public class Main {
                 System.out.println("Enter the power");
                 int pow = sc.nextInt();
                 System.out.println("Power(first^second)");
-                int ans = (int) Math.pow(num, pow);
+                double ans = getpow(num, pow);
                 System.out.println(ans);
             } else if(choice==5){
                 break;
@@ -54,4 +63,3 @@ public class Main {
         }
     }
 }
-

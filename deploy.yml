@@ -1,0 +1,13 @@
+---
+- name: Pull and Run docker image of rahul166/projectrepo
+  hosts: all
+  tasks:
+    - name: Pull rahul166/projectrepo
+      docker_image:
+        name: rahul166/projectrepo
+        source: pull
+    - name: Create default containers
+      docker_container:
+        name: c1
+        image: rahul166/projectrepo
+        state: present

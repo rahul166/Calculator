@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int fact(int n){
+    public int fact(int n){
         if(n==1){
             return 1;
         }
@@ -9,17 +9,18 @@ public class Main {
             return n*fact(n-1);
         }
     }
-    public static double getsqrt(int num){
+    public double getsqrt(int num){
         return Math.sqrt(num);
     }
-    public static double getlog(int num){
+    public double getlog(int num){
         return Math.log(num);
     }
-    public static double getpow(int num,int pow){
+    public double getpow(int num,int pow){
         return Math.pow(num,pow);
     }
     public static void main(String[] args){
         while(true) {
+            Main obj=new Main();
             System.out.println("Welcome......");
             System.out.println("Enter your choice \n" +
                     "1. Factorial \n" +
@@ -34,19 +35,19 @@ public class Main {
                 System.out.println("Enter the number");
                 int num = sc.nextInt();
                 System.out.println("Factorial Of the Number");
-                int ans = fact(num);
+                int ans = obj.fact(num);
                 System.out.println(ans);
             } else if (choice == 2) {
                 System.out.println("Enter the number");
                 int num = sc.nextInt();
                 System.out.println("Square root Of the Number");
-                double ans=getsqrt(num);
+                double ans=obj.getsqrt(num);
                 System.out.println(ans);
             } else if (choice == 3) {
                 System.out.println("Enter the number");
                 int num = sc.nextInt();
                 System.out.println("Log Of the Number");
-                double ans = getlog(num);
+                double ans = obj.getlog(num);
                 System.out.println(ans);
             } else if (choice == 4) {
                 System.out.println("Enter the base number");
@@ -54,7 +55,7 @@ public class Main {
                 System.out.println("Enter the power");
                 int pow = sc.nextInt();
                 System.out.println("Power(first^second)");
-                double ans = getpow(num, pow);
+                double ans = obj.getpow(num, pow);
                 System.out.println(ans);
             } else if(choice==5){
                 break;

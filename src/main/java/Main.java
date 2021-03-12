@@ -1,5 +1,6 @@
 import java.util.Scanner;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 public class Main {
     public int fact(int n){
         if(n==1){
@@ -9,13 +10,19 @@ public class Main {
             return n*fact(n-1);
         }
     }
+    private static final Logger logger = LogManager.getLogger(Main.class);
     public double getsqrt(int num){
+        logger.info("Calculating Square root  of number " + num);
         return Math.sqrt(num);
     }
     public double getlog(int num){
+        logger.info("Calculating log of number " + num);
+
         return Math.log(num);
     }
     public double getpow(int num,int pow){
+        logger.info("Calculating power of number " + num);
+
         return Math.pow(num,pow);
     }
     public static void main(String[] args){
@@ -36,6 +43,7 @@ public class Main {
                 int num = sc.nextInt();
                 System.out.println("Factorial Of the Number");
                 int ans = obj.fact(num);
+                logger.info("Calculating factorial of number " + num);
                 System.out.println(ans);
             } else if (choice == 2) {
                 System.out.println("Enter the number");
